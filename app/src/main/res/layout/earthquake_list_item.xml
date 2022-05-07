@@ -20,15 +20,21 @@
             android:id="@+id/location"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             tools:text="Moscow"/>
         <TextView
             android:id="@+id/date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             tools:text="mar 28,2022" />
-
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="15dp"
+            tools:text="3:00 PM" />
 
 
 </LinearLayout >
