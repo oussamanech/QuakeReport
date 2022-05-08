@@ -53,13 +53,15 @@ public class QueryUtils {
             for(int i = 0; i<earthquakerArray.length();i++){
                 JSONObject currentEarthquake = earthquakerArray.getJSONObject(i);
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
-                String magnitude = properties.getString("mag");
+                double  magnitude = properties.getDouble("mag");
                 String location = properties.getString("place");
 //               String time = properties.getString("time");
                 long time1 = properties.getLong ("time");
+                // Extract the value for the key called "url"
+                String url = properties.getString("url");
 
 
-                earthquakes.add(new Earthquake(magnitude,location,time1));
+                earthquakes.add(new Earthquake(magnitude,location,time1,url));
 
             }
 

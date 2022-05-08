@@ -2,18 +2,20 @@ package com.example.quake_report;
 
 public class Earthquake {
 
-    private String mMagnitude;
+    private double mMagnitude;
     private String mLocation;
     private long mTimeInMilliseconds;
+    /** Website URL of the earthquake */
+    private String mUrl;
 
-
-    public Earthquake(String mMagnitude, String mLocation, long mTimeInMilliseconds) {
+    public Earthquake(double mMagnitude, String mLocation, long mTimeInMilliseconds, String url) {
         this.mMagnitude = mMagnitude;
         this.mLocation = mLocation;
         this.mTimeInMilliseconds = mTimeInMilliseconds;
+        mUrl = url;
     }
 
-    public String getmMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
@@ -26,6 +28,12 @@ public class Earthquake {
      */
     public long getTimeInMilliseconds() {
         return mTimeInMilliseconds;
+    }
+    /**
+     * Returns the website URL to find more information about the earthquake.
+     */
+    public String getUrl() {
+        return mUrl;
     }
 
 }
